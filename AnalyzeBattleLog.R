@@ -1,6 +1,9 @@
-line = readLines("sample2.txt")
+line = readLines("sample.log")
 
 for(item in line)
 {
-  print(item)
+  if(grepl('ProcessMonitor', item) == TRUE)
+  {
+    print(item)
+  }
 }

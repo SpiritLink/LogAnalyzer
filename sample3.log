@@ -1,0 +1,2 @@
+2021-02-18 00:04:29.7600 | ip-10-0-0-191 |  INFO |           s.N.H.ChannelManager | 32  | [Battle][ChannelManager] Close TrashChannels ended. Closed Count : 1, Elapsed : 0 ms.
+2021-02-18 00:09:25.7673 | ip-10-0-0-191 |  INFO | s.I.S.AbstractMonitorService`1 | 57  | [ProcessMonitor] Min : [PMemory, CpuP, PWIC, GCStatOccur:Min]230MiB 1.55% 0 0 Hour : [PMemory, CpuP, PWIC, GCStatOccur:Min]230MiB 1.55% 0 0 Day : [PMemory, CpuP, PWIC, GCStatOccur:Min]230MiB 1.50% 0 0
