@@ -4,9 +4,9 @@ library(ggplot2)
 line = readLines("E:/Projects/R/LogAnalyzer/sample.log")
 
 
-times = as.list(NA)
-mins = as.list(NA)
-maxs = as.list(NA)
+times <- vector()
+mins <- vector()
+maxs <- vector()
 
 for(item in line)
 {
@@ -21,14 +21,7 @@ for(item in line)
   }
 }
 
-times[1] <- NULL
-mins[1] <- NULL
-maxs[1] <- NULL
-myTimes <- data.frame(times)
-myMins <- data.frame(mins)
-myMaxs <- data.frame(maxs)
-
-df <- data.frame(myMins, myMaxs)
+df <- data.frame(times, mins, maxs)
 
 str(df)
 # ggplot(df, aes(x = times, y = mins))
