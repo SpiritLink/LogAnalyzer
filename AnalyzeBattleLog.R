@@ -1,5 +1,10 @@
 # install.packages("ggplot2")
+# install.packages("tidyverse")
+# install.packages("lubridate")
+
 library(ggplot2)
+library(tidyverse)
+library(lubridate)
 
 line = readLines("E:/Projects/R/LogAnalyzer/sample.log")
 
@@ -15,11 +20,15 @@ for(item in line)
     spritresult = strsplit(item, "\\s+")
     separate = unlist(spritresult)
   
-    times[length(times) + 1] <- separate[2]
+    timeStr = paste(separate[1], ' ', separate[2]);
+    timeStr = substr(timeStr, 1, 21)
+    timeValue = ymd_hms(timeStr) #strptime(timeStr, "%Y-%m-%d %H:%M:%S", tz = "EST5EDT");
+    times[length(times) + 1] <- timeValue
     mins[length(mins) + 1] <- as.numeric(gsub("%", "", separate[19]))
     maxs[length(maxs) + 1] <- as.numeric(gsub("%", "", separate[28]))
   }
 }
+
 
 df <- data.frame(times, mins, maxs)
 
