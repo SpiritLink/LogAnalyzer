@@ -29,8 +29,7 @@ for(item in line)
   }
 }
 
-
 df <- data.frame(times, mins, maxs)
 
 str(df)
-# ggplot(df, aes(x = times, y = mins))
+ggplot(df, aes(x = times, y = mins)) + geom_line(size = 1, color = "red")
